@@ -1,0 +1,64 @@
+---
+layout: default
+title: Home
+---
+<div class="intro">
+  <div class="avatar" aria-hidden="true">R</div>
+  <div>
+    <!-- [BIO — write this yourself, 2–4 sentences in your own voice] -->
+    <h1 class="name">Rhea</h1>
+    <p class="bio">I build things at the intersection of machine learning and public infrastructure, and I've spent the last few years asking harder questions than "does it work" — mostly whether it should exist, and for whom. I'm currently Head Girl at my school and finishing the IB Diploma Programme in Mumbai.</p>
+    <p class="bio">I like teaching more than most things. I also like theatre, horseback riding, and getting slightly lost on long treks.</p>
+  </div>
+</div>
+
+<a class="latest-link" href="{{ '/writing/' | relative_url }}">Latest writing →</a>
+
+<section id="currently">
+  <h2 class="section-title">Currently</h2>
+  <p>Finishing my senior year of the IB Diploma Programme and applying to university — currently deciding between Oxford (CS &amp; Philosophy), CMU (Statistics &amp; Machine Learning), JHU, and UMich (CS-LSA), with Stanford under consideration.</p>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <p><strong>[Your School Name], Mumbai</strong><br>IB Diploma Programme, Class of [20XX]<br>Head Girl</p>
+</section>
+
+<section id="research">
+  <h2 class="section-title">Research</h2>
+  <p><span class="lede">Computational immunology.</span> Designed a multi-epitope Lassa fever vaccine candidate using an immunoinformatics pipeline built on BepiPred 2.0, MHCflurry, AlphaFold, and C-ImmSim. Written up in IEEE format — <a href="#">paper</a>.</p>
+  <p><span class="lede">Infrastructure ML.</span> Built Water wAIS, a machine learning framework predicting pipe-leak risk across Mumbai's water distribution network, using Random Forest, XGBoost, LSTM, and reinforcement learning against real MCGM data. Submitted to the Stockholm Junior Water Prize (India). There's a working prototype with a Leaflet.js dashboard — <a href="#">demo</a>.</p>
+  <p><span class="lede">Energy systems.</span> Worked on a thermal sand battery for high-altitude, cold-weather applications during an internship at IIT Bombay, under Prof. Sandeep Kumar (Dept. of Energy Science &amp; Engineering).</p>
+  <p>I also attended <a href="#">PAIR</a> (Program on AI and Reasoning) in Prague, and completed the Non-Trivial Fellowship, focused on surrogate modelling — Gaussian processes, Kriging, RBF, and neural operators.</p>
+</section>
+
+<section id="teaching">
+  <h2 class="section-title">Teaching</h2>
+  <p>I teach maths and computer science weekly to middle schoolers near Chatrabuj. I also founded <a href="#"><em>The Bulleteen</em></a>, a student STEM publication with contributors from several countries.</p>
+</section>
+
+<section id="art">
+  <h2 class="section-title">Art</h2>
+  <!-- [FILL IN — list what you actually love, not what sounds impressive] -->
+  <p><strong>Theatre:</strong> [productions or roles you've loved].</p>
+  <p><strong>Outdoors:</strong> trekking, horseback riding, dirt cycling — [a specific trail, ride, or trip worth naming].</p>
+  <p><strong>Reading:</strong> [the books/essays that actually shaped how you think].</p>
+</section>
+
+<section id="misc">
+  <h2 class="section-title">Other Miscellaneous Facts</h2>
+  <p>I did a 20km trek in Kenya as part of my CAS work, and ran a cybersecurity awareness campaign (CyberSafe) for grades 3–5. This site is built with Jekyll — I like making tools almost as much as I like using them.</p>
+</section>
+
+<section id="writing-preview">
+  <h2 class="section-title">Writing</h2>
+  <ul class="entry-list">
+    {% for post in site.posts limit:5 %}
+    <li class="entry">
+      <span class="date">{{ post.date | date: "%b %Y" }}</span>
+      <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="view-all" href="{{ '/writing/' | relative_url }}">View all →</a>
+</section>

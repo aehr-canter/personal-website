@@ -1,0 +1,42 @@
+# ---- Site settings ----
+# Edit these before you deploy — jekyll-seo-tag and jekyll-feed both
+# read from here to build your meta tags and RSS feed.
+title: Rhea
+description: >-
+  Research, teaching, and writing.
+url: "https://example.com"       # your final domain, no trailing slash
+author: Rhea
+email: you@example.com
+github_username: yourusername
+twitter_username: ""             # optional, leave blank to omit
+
+# ---- Permalinks ----
+permalink: /posts/:title/
+
+# ---- Build ----
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
